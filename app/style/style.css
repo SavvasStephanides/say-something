@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header-site-title-link{
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+    font-family: Caprasimo, cursive;
+}
+
+.header-site-title-link:hover,
+.header-site-title-link:focus{
+    text-decoration: underline;
+}
+
+.fixed-width-wrapper{
+    max-width: 600px;
+    margin: auto
+}
+
+.grey-background{
+    background-color: #efefef;
+}
+
+.fixed-padding{
+    padding: 30px;
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.handwritten-message{
+    font-size: 36px;
+    font-style: italic;
+    font-family: 'Indie Flower', cursive;
+}
+
+.no-bullet-list{
+    list-style: none;
+}
+
+.navigation-list{
+    display: flex;
+}
+
+.navigation-list li{
+    margin-left: 12px;
+}
+
+.navigation-list li:first-child{
+    margin-left: 0px;
+}
+
+.navigation-list li a{
+    display: block;
+    text-decoration: none;
+    background-color: #efefef;
+    padding: 15px;
+    border-radius: 9px;
+    font-weight: bold;
+    color: black;
+}
+
+.message-preview-module{
+    display: block;
+    text-decoration: none;
+    border: 1px solid #eee;
+    box-shadow: 0 0 15px #eee;
+    height: 200px;
+    border-radius: 9px;
+    color: black;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+
+    transition: background-color 0.5s ease;
+}
+
+@media (prefers-reduced-motion: no-preference){
+    .message-preview-module{
+        transition: background-color 0.5s ease;
+    }
+}
+
+.message-preview-module .handwritten-message{
+    font-size: 24px;
+}
+
+.message-preview-module:hover,
+.message-preview-module:focus{
+    background-color: #333;
+    color: white;
+}
+
+.navigation-list li a.strong-call-to-action-link{
+    background-color: green;
+    color: white;
+}
