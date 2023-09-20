@@ -1,8 +1,9 @@
 import { Message } from "./message";
 import * as fs from 'fs';
+import path from "path"
 
 export class MessageService{
-    private messagesDirectory: string = `./app/messages`
+    private messagesDirectory: string = path.join(path.resolve(), "app/messages")
 
     getAllMessages(): Message[]{
         const messageIds: string[] = fs.readdirSync(this.messagesDirectory)
