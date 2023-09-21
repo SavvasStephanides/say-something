@@ -1,5 +1,6 @@
 import { cssBundleHref } from "@remix-run/css-bundle";
 import {
+  Link,
   Links,
   LiveReload,
   Meta,
@@ -29,8 +30,10 @@ export default function App() {
         <Links />
       </head>
       <body>
+        <a href="#main-content" className="skip-to-main-content-link">Skip to main content</a>
         <Header />
         <Navigation />
+        <div id="main-content"></div>
         <Outlet />
         <ScrollRestoration />
         <Scripts />

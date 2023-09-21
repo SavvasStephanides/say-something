@@ -71,6 +71,12 @@
     color: black;
 }
 
+.navigation-list li a:hover,
+.navigation-list li a:focus{
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+
 .message-preview-module{
     display: block;
     text-decoration: none;
@@ -85,11 +91,6 @@
 
 }
 
-@media (prefers-reduced-motion: no-preference){
-    .message-preview-module{
-        transition: background-color 0.5s ease;
-    }
-}
 
 .message-preview-module .handwritten-message{
     font-size: 24px;
@@ -112,4 +113,31 @@
 
 .navigation-list li a.js-only[show='1']{
     display: block;
+}
+
+@media (prefers-reduced-motion: no-preference){
+    .message-preview-module{
+        transition: background-color 0.3s ease;
+    }
+
+    .navigation-list li a{
+        transition: transform 0.3s ease;
+    }
+}
+
+a.skip-to-main-content-link{
+    display: block;
+    position: fixed;
+    left: 0;
+    bottom: 100%;
+
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+
+    z-index: 10;
+}
+
+.skip-to-main-content-link:focus{
+    top: 0;
 }
