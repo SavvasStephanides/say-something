@@ -83,7 +83,6 @@
     align-items: center;
     padding: 15px;
 
-    transition: background-color 0.5s ease;
 }
 
 @media (prefers-reduced-motion: no-preference){
@@ -105,4 +104,12 @@
 .navigation-list li a.strong-call-to-action-link{
     background-color: green;
     color: white;
+}
+
+.navigation-list li a.js-only{
+    display: none;
+}
+
+.navigation-list li a.js-only[show='1']{
+    display: block;
 }

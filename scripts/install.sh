@@ -1,0 +1,1 @@
+docker run -it --rm -v $PWD:/say-something -w /say-something node:18.18-alpine3.18 npm i

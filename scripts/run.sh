@@ -1,0 +1,1 @@
+docker run -it --rm -v $PWD:/say-something -w /say-something -p 3000:3000 node:18.18-alpine3.18 npm run dev
