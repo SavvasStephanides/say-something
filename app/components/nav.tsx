@@ -10,8 +10,8 @@ export default function Navigation(){
   })
     return (<nav style={{borderBottom: "1px solid #efefef"}}>
         <ul className="fixed-width-wrapper fixed-padding no-bullet-list navigation-list">
-          <li><Link to="/write" className="strong-call-to-action-link">Write!</Link></li>
-          <li><Link to="/random" className="js-only">Random</Link></li>
+          <li><Link to="/write" className="strong-call-to-action-link" aria-label="Submit your own message on Say Something">Write!</Link></li>
+          <li><Link to="/random" className="js-only" aria-label="Read a random message">Random</Link></li>
         </ul>
       </nav>)
 }

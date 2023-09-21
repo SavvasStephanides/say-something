@@ -5,13 +5,6 @@ import { LoaderArgs, json } from "@remix-run/node"
 import { useLoaderData } from "@remix-run/react";
 import { MessageService } from "~/modules/messages/message-service";
 
-export const meta: MetaFunction = () => {
-    return [
-        { title: "Say Something" },
-        { name: "description", content: "People saying things." },
-    ];
-};
-
 export const loader = async ({params}: LoaderArgs) => {
     const messageService = new MessageService()
 
@@ -21,6 +14,13 @@ export const loader = async ({params}: LoaderArgs) => {
         message
       })
 }
+
+export const meta: MetaFunction<typeof loader> = ({data}) => {
+    return [
+        { title: `A message from ${data?.message.author} - Say Something` },
+        { name: "description", content: `A message from ${data?.message.author}` },
+    ];
+};
 
 export default function Index() {
     const {message} = useLoaderData<typeof loader>()
