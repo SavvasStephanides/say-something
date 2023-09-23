@@ -165,8 +165,12 @@ Depending on your system, it will ask you to add your Github credentials. Enter 
 
 After a few seconds, your changes should show up on your copy of the Say Something code!
 
+![](/write-page-assets/updated-fork.png)
+
 </details>
 
 Lastly, we need to add your message to the main website, for the world to see! 👀
 
----
+## Step 4: Ask for your changes to be put on the main repository
+
+To ask for your changed file (and message) to be put on the main codebase and therefore the main website, you'll need to create what is called a *pull request*.
