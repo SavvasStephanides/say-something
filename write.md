@@ -135,10 +135,38 @@ Once you're done, go back to the `say-something` root directory:
 cd ../..
 ```
 
+Now for the last 3 steps: put our changed file to a stage, tell Git that it's safe to push the changes and then push them to your repository.
 
+Firstly, we're going to "stage" our file. Think of it like putting the file in a box with a tag that says "please put these files in my code".
+
+To do this, we're going to use the `git add` command:
+
+```
+git add -A
+```
+
+Next, we're going to say "definitely push these changes", or as we say, we're going to "commit our files". Think of it like putting a lid on the box because we're sure we want to put our changed files in our code. To do this, we're using the `git commit` command:
+
+```
+git commit -m "My message"
+```
+
+(`-m` basically means "what I write next is a message)
+
+Finally, we're going to actually "push" our changes to our code on Github. To do this, we're going to use the `git push` command:
+
+```
+git push
+```
+
+Depending on your system, it will ask you to add your Github credentials. Enter your username and for your password, paste a token that you can create in [your token settings](https://github.com/settings/tokens).
+
+⚠️ Don't enter your Github password in the password field. Generate a token and use that instead!
+
+After a few seconds, your changes should show up on your copy of the Say Something code!
 
 </details>
 
-Lastly, we need to add your message to the main website!
+Lastly, we need to add your message to the main website, for the world to see! 👀
 
 ---
