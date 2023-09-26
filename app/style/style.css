@@ -141,3 +141,30 @@ a.skip-to-main-content-link{
 .skip-to-main-content-link:focus{
     top: 0;
 }
+
+article img{
+    width: 100%;
+    border: 1px solid #eee;
+}
+
+article p,
+article h2,
+article details{
+    margin-top: 30px;
+    line-height: 1.5;
+}
+
+article details{
+    cursor: pointer;
+    border: 1px solid #ddd;
+    padding: 9px;
+    border-radius: 9px;
+}
+
+article code{
+    border: 1px solid #333;
+    font-family: monospace;
+    padding: 6px;
+    background-color: #efefef;
+    font-size: 16px;
+}

@@ -174,3 +174,41 @@ Lastly, we need to add your message to the main website, for the world to see! �
 ## Step 4: Ask for your changes to be put on the main repository
 
 To ask for your changed file (and message) to be put on the main codebase and therefore the main website, you'll need to create what is called a *pull request*.
+
+To do this, go to your repository's page on Github and click the *Pull requests* tab at the top:
+
+![](/write-page-assets/pull-request-tab-link.png)
+
+In the *Pull requests* page, you'll see a green "New pull request" button.
+
+![](/write-page-assets/new-pull-request-button.png)
+
+Click the button and you'll be taken to the *Comparing changes* page.
+
+This page essentially compares your repository with the main repository you copied from at the beginning. 
+
+![](/write-page-assets/file-changes.png)
+
+In this case:
+
+> Showing 1 changed file with 3 additions and 0 deletions.
+
+Basically this means that there's 1 file that has changed (or created) with 3 lines added.
+
+Now that you've seen your changes, click the green *Create pull request* button at the top right.
+
+![](/write-page-assets/create-pull-request-button.png)
+
+Finally, click the *Create pull request* button.
+
+You have now successfully created a *pull request*! In other words, you have created a *request* for your message to show up on the main Say Something site!
+
+![](/write-page-assets/pull-request.png)
+
+Now you have to wait for a bit for the request to be approved, and once that's done, your message will show up on the website! 🎉🎉🎉🎉
+
+![](/write-page-assets/message.png)
+
+That's it! You've contributed to open source and you're message can be read by the whole world! 
+
+Well done! 👏👏👏👏
