@@ -147,11 +147,17 @@ article img{
     border: 1px solid #eee;
 }
 
+article h1{
+    font-size: 30px;
+}
 article p,
-article h2,
 article details{
     margin-top: 30px;
     line-height: 1.5;
+}
+
+article h2{
+    margin-top: 60px;
 }
 
 article details{
