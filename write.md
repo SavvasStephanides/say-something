@@ -61,6 +61,7 @@ In the big edit box below, enter your name followed by your message, in this for
 
 ```
 By: <your name>
+
 <Your message>
 ```
 
@@ -149,10 +150,10 @@ git add -A
 Next, we're going to say "definitely push these changes", or as we say, we're going to "commit our files". Think of it like putting a lid on the box because we're sure we want to put our changed files in our code. To do this, we're using the `git commit` command:
 
 ```
-git commit -m "My message"
+git commit -m "Adding my message to Say Something!"
 ```
 
-(`-m` basically means "what I write next is a message)
+(`-m` is basically where you describe your changes)
 
 Finally, we're going to actually "push" our changes to our code on Github. To do this, we're going to use the `git push` command:
 

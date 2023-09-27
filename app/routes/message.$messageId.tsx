@@ -38,9 +38,6 @@ export default function Index() {
                     </div>
                 </section>
             </main>
-            <footer>
-
-            </footer>
         </div>
     );
 }
