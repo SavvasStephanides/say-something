@@ -150,10 +150,15 @@ article img{
 article h1{
     font-size: 30px;
 }
+
 article p,
 article details{
+    line-height: 2;
+}
+article p,
+article details,
+article pre{
     margin-top: 30px;
-    line-height: 1.5;
 }
 
 article h2{
@@ -161,14 +166,22 @@ article h2{
 }
 
 article details{
-    cursor: pointer;
     border: 1px solid #ddd;
     padding: 9px;
     border-radius: 9px;
 }
 
+article details summary{
+    cursor: pointer;
+}
+
+article pre code{
+    display: block;
+}
+
 article code{
     border: 1px solid #333;
+    border-radius: 6px;
     font-family: monospace;
     padding: 6px;
     background-color: #efefef;
