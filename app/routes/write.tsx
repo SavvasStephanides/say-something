@@ -22,7 +22,7 @@ export const loader = async () => {
     <p>In order to make changes to someone's piece of code, you have to first create a copy of the code and put it on your own account. </p>
     <p>This new copy of the code is what we call a <em>fork</em>. </p>
     <p>Here's how you can create your own fork of the Say Something code:</p>
-    <p>First, go to the code of the Say Something project.</p>
+    <p>First, go to the <a href="https://github.com/savvasStephanides/say-something">code of the Say Something project</a>.</p>
     <p><img src="/write-page-assets/repo.png" alt="" /></p>
     <p>Next, on the top right of the page you'll see a link labelled "Fork" with a number next to it. Click on it.</p>
     <p><img src="/write-page-assets/fork-button.png" alt="" /></p>
