@@ -1,5 +1,4 @@
 import type { MetaFunction } from "@remix-run/node";
-import Header from "~/components/header";
 import "~/style/style.css"
 import { LoaderArgs, json } from "@remix-run/node"
 import { useLoaderData } from "@remix-run/react";
@@ -36,6 +35,12 @@ export default function Index() {
                     <div style={{ marginTop: "21px"}} className="handwritten-message">
                         {message?.message}
                     </div>
+                </section>
+                <section className="fixed-width-wrapper fixed-padding">
+                    <h2>Share this message</h2>
+                    <ul className="no-bullet-list" style={{marginTop: "15px"}}>
+                        <li><a style={{display: "block", backgroundColor: "#030303", color: "white", padding: "15px", textDecoration: "none", borderRadius: "15px"}} href={`https://twitter.com/intent/tweet?text=Check out this message by ${message.author} on Say Something! https://just-say-something.vercel.app/message/${message.id}`}>Share on X (Twitter)</a></li>
+                    </ul>
                 </section>
             </main>
         </div>
