@@ -1,0 +1,30 @@
+@media(prefers-color-scheme: dark){
+    *{
+        color: white;
+    }
+    body{
+        background-color: #333333;
+    }
+    .header-site-title-link{
+        color: white;
+    }
+
+    .grey-background{
+        background-color: #111111;
+    }
+
+    .message-preview-module{
+        box-shadow: 0 0 0;
+        border: 3px solid white;
+    }
+
+    .message-preview-module:hover,
+    .message-preview-module:focus{
+        background-color: #555;
+        color: white;
+    }
+
+    a.skip-to-main-content-link{
+        color: white;
+    }
+}

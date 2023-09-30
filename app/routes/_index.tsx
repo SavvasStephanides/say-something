@@ -1,7 +1,7 @@
 import type { MetaFunction } from "@remix-run/node";
 import { Link } from "@remix-run/react";
-import Header from "~/components/header";
 import "~/style/style.css"
+import "~/style/darkmode.css"
 import { LoaderArgs, json } from "@remix-run/node"
 import { useLoaderData } from "@remix-run/react";
 import { Message } from "~/modules/messages/message";
