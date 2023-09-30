@@ -38,6 +38,9 @@ export default function App() {
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
+        <footer className="fixed-width-wrapper fixed-padding" style={{borderTop: "1px solid #eee"}}>
+          Made with ☕️ and ❤️ By <Link to="https://savvas.me/links">Savvas Stephanides</Link>
+        </footer>
       </body>
     </html>
   );
