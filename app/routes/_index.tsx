@@ -34,7 +34,7 @@ export default function Index() {
           <h2 className="visually-hidden">About</h2>
           <p className="fixed-width-wrapper fixed-padding" style={{fontSize: "18px", lineHeight: "2"}}>
             <span aria-hidden="true">🗣️</span> Say Something is a project where you can send a message to the world by making a simple open source contribution! 
-            Perfect for beginner developers looking to make their first contribution to open source! <Link to="/write">Just create a simple file</Link>! Happy Hacktoberest!
+            Perfect for beginner developers looking to make their first contribution to open source! <Link to="/write">Just create a simple file</Link>! Happy Hacktoberfest!
             
           </p>
         </section>
