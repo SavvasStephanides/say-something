@@ -1,32 +1,9 @@
-# Remix
+# Say Something
 
-This directory is a brief example of a [Remix](https://remix.run/docs) site that can be deployed to Vercel with zero configuration.
+Say Something is a project which lets you share a message with the world by making your very first contribution to open source.
 
-## Deploy Your Own
+## Share your message on Say Something
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/vercel/tree/main/examples/remix&template=remix)
+To share your message with Say Something, you'll need to contribute to the Say Something code by creating a simple file. Perfect if you are a first-time open source contributor!
 
-_Live Example: https://remix-run-template.vercel.app_
-
-You can also deploy using the [Vercel CLI](https://vercel.com/cli):
-
-```sh
-npm i -g vercel
-vercel
-```
-
-## Development
-
-To run your Remix app locally, make sure your project's local dependencies are installed:
-
-```sh
-npm install
-```
-
-Afterwards, start the Remix development server like so:
-
-```sh
-npm run dev
-```
-
-Open up [http://localhost:3000](http://localhost:3000) and you should be ready to go!
+To begin, [follow these instructions](https://just-say-something.vercel.app/write). Enjoy!
