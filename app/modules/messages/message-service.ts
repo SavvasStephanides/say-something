@@ -23,6 +23,7 @@ export class MessageService{
         let splitMessage: string[] = file.split("\n")
 
         let author: string = splitMessage[0]
+        author = author.replace("By: ", "")
 
         splitMessage.shift()
 
