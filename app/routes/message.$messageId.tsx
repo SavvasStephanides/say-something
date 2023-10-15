@@ -24,6 +24,9 @@ export const meta: MetaFunction<typeof loader> = ({data}) => {
 export default function Index() {
     const {message} = useLoaderData<typeof loader>()
 
+    console.log(message);
+    
+
     return (
         <div>
             <main>
@@ -33,7 +36,11 @@ export default function Index() {
 
                     <div style={{ fontSize: "21px", marginTop: "15px" }}>{message?.author} said:</div>
                     <div style={{ marginTop: "21px"}} className="handwritten-message">
-                        {message?.message}
+                        {
+                            message.message.map((line) => (
+                                <p className="message-line">{line}</p>
+                            ))
+                        }
                     </div>
                 </section>
                 <section className="fixed-width-wrapper fixed-padding">

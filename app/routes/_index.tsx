@@ -46,7 +46,7 @@ export default function Index() {
           {
             messages.map((message) => (
               <li key={message.id}>
-                <Link to={`/message/${message.id}`} className="message-preview-module" aria-label={`Open a message from ${message.author} that starts with "${message.message.split(" ").slice(0,5).join(" ")}"`}>
+                <Link to={`/message/${message.id}`} className="message-preview-module" aria-label={`Open a message from ${message.author} that starts with "${message.message[0].split(" ").slice(0,5).join(" ")}"`}>
                   <div>
                     <div className="handwritten-message">{message.message.length > 100 ? `${message.message.slice(0,100)}...` : message.message}</div>
                     <div style={{marginTop: "15px"}}>from {message.author}</div>

@@ -45,6 +45,10 @@
     font-family: 'Indie Flower', cursive;
 }
 
+.handwritten-message p{
+    margin-top: 30px;
+}
+
 .no-bullet-list{
     list-style: none;
 }

@@ -18,12 +18,19 @@ export class MessageService{
     }
 
     getMessageById(id: string): Message{
-        let file = fs.readFileSync(`${this.messagesDirectory}/${id}`, 'utf-8')
-        let author = file.split("\n")[0].replace("By: ", "")
-        let message = file.split("\n")[2]
+        let file = fs.readFileSync(`${this.messagesDirectory}/${id}`).toString()
+
+        let splitMessage: string[] = file.split("\n")
+
+        let author: string = splitMessage[0]
+
+        splitMessage.shift()
+
+        splitMessage = splitMessage.filter(line => line !== '')
+
         let dateCreated: Date = fs.statSync(`${this.messagesDirectory}/${id}`).mtime
 
-        return new Message(id, author, message, dateCreated)
+        return new Message(id, author, splitMessage, dateCreated)
     }
 
     getLatestMessage(): Message{
