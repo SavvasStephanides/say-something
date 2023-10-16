@@ -38,7 +38,7 @@ export default function Index() {
                     <div style={{ marginTop: "21px"}}>
                         {
                             message.message.map((line) => (
-                                <p className="message-line handwritten-message">{line}</p>
+                                <p className="message-line handwritten-message" style={{marginTop: "30px"}}>{line}</p>
                             ))
                         }
                     </div>
