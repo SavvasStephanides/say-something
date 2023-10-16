@@ -35,10 +35,10 @@ export default function Index() {
                     <h2 className="visually-hidden">Message by {message?.author}</h2>
 
                     <div style={{ fontSize: "21px", marginTop: "15px" }}>{message?.author} said:</div>
-                    <div style={{ marginTop: "21px"}} className="handwritten-message">
+                    <div style={{ marginTop: "21px"}}>
                         {
                             message.message.map((line) => (
-                                <p className="message-line">{line}</p>
+                                <p className="message-line handwritten-message">{line}</p>
                             ))
                         }
                     </div>
