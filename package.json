@@ -8,7 +8,7 @@
     "dev": "remix dev --manual",
     "start": "remix-serve ./build/index.js",
     "typecheck": "tsc",
-    "ci": "tsx ci.ts"
+    "ci": "npx -y tsx ci.ts"
   },
   "dependencies": {
     "@remix-run/css-bundle": "^2.0.0",
