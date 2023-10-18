@@ -21,10 +21,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Check message files
-      uses: actions/setup-node@v3
+    - uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm i
-    - run: npm run ci
+    - name: Check message formatting
+      run: |
+        npm i
+        npm run ci
