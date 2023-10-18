@@ -191,3 +191,13 @@ article code{
     background-color: #efefef;
     font-size: 16px;
 }
+
+.desktop-only-label{
+    display: none;
+}
+
+@media (min-width: 600px) {
+    .desktop-only-label{
+        display: inline;
+    }
+}

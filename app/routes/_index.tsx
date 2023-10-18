@@ -40,7 +40,7 @@ export default function Index() {
         </section>
 
         <section>
-          <h2 className="fixed-width-wrapper fixed-padding" style={{marginTop: "9px"}}>Latest messages</h2>
+          <h2 className="fixed-width-wrapper fixed-padding" style={{marginTop: "9px"}}>Messages</h2>
 
           <ul className="fixed-width-wrapper fixed-padding no-bullet-list" style={{display: "flex", flexDirection: "column", gap: "30px"}}>
           {
