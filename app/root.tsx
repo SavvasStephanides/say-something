@@ -39,7 +39,7 @@ export default function App() {
         <Scripts />
         <LiveReload />
         <footer className="fixed-width-wrapper fixed-padding" style={{borderTop: "1px solid #eee"}}>
-          Made with ☕️ and ❤️ By <Link to="https://savvas.me/links">Savvas Stephanides</Link>. <Link to="https://twitter.com/SavvasStephnds">Follow Savvas on Twitter!</Link>
+          Made with ☕️ and ❤️ by <Link to="https://savvas.me/links">Savvas Stephanides</Link>.
         </footer>
       </body>
     </html>
