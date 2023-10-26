@@ -6,10 +6,6 @@ import path from "path"
 export class MessageService{
     private messagesDirectory: string = path.join(path.resolve(), "app/messages")
 
-    private sanitizeAuthor(authorString: string) {
-        return 
-    }
-
     async getAllMessages(): Promise<Message[]>{
         const messageIds: string[] = await readdir(this.messagesDirectory)
 
