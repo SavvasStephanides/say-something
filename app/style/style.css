@@ -201,3 +201,7 @@ article code{
         display: inline;
     }
 }
+
+img.author-gravatar {
+    border-radius: 10px; /* You can adjust the pixel value to control the amount of rounding */
+}

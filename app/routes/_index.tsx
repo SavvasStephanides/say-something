@@ -17,7 +17,7 @@ export const meta: MetaFunction = () => {
 export const loader = async () => {
   const messageService: MessageService = new MessageService()
 
-  let messages: Message[] = messageService.getAllMessages()
+  let messages: Message[] = await messageService.getAllMessages()
 
   return json({
       messages,

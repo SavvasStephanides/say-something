@@ -1,13 +1,13 @@
 import { useEffect } from "react"
 import { MessageService } from "~/modules/messages/message-service"
-import { LoaderArgs, json } from "@remix-run/node"
+import { json } from "@remix-run/node"
 import { useLoaderData } from "@remix-run/react";
-import { Message } from "~/modules/messages/message";
+import type { Message } from "~/modules/messages/message";
 
 export const loader = async () => {
     const messageService = new MessageService()
 
-    let messages = messageService.getAllMessages()
+    let messages = await messageService.getAllMessages()
 
     return json({
         messages

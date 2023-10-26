@@ -1,41 +1,55 @@
 import { Message } from "./message";
-import * as fs from 'fs';
+import { createHash } from 'crypto';
+import { readFile, readdir, stat } from 'node:fs/promises';
 import path from "path"
 
 export class MessageService{
     private messagesDirectory: string = path.join(path.resolve(), "app/messages")
 
-    getAllMessages(): Message[]{
-        const messageIds: string[] = fs.readdirSync(this.messagesDirectory)
+    private sanitizeAuthor(authorString: string) {
+        return 
+    }
 
-        let messages: Message[] = messageIds.map(messageId => {
-            return this.getMessageById(messageId)
-        })
+    async getAllMessages(): Promise<Message[]>{
+        const messageIds: string[] = await readdir(this.messagesDirectory)
+
+        let messages: Message[] = await Promise.all(messageIds.map(async messageId => {
+            return await this.getMessageById(messageId)
+        }))
         
         messages = messages.sort((a,b) => b.dateCreated < a.dateCreated ? -1 : 1)
         
         return messages
     }
 
-    getMessageById(id: string): Message{
-        let file = fs.readFileSync(`${this.messagesDirectory}/${id}`).toString()
+    async getMessageById(id: string): Promise<Message>{
+        let file = await readFile(`${this.messagesDirectory}/${id}`, 'utf8')
 
         let splitMessage: string[] = file.split("\n")
 
-        let author: string = splitMessage[0]
-        author = author.replace("By: ", "")
+        let author: string = splitMessage[0].replace("By: ", "")
+
+        let authorGravatar = ""
+        console.log(author)
+        if (author.indexOf("<") != -1){
+            let authorEmail = (author.split("<")[1]).split(">")[0];
+            author = author.split("<")[0]
+            let authorGravatarHash = createHash('sha256').update(authorEmail).digest('hex');
+            authorGravatar = `https://gravatar.com/avatar/${authorGravatarHash}?s=75&r=g`;
+        }
 
         splitMessage.shift()
 
         splitMessage = splitMessage.filter(line => line !== '')
 
-        let dateCreated: Date = fs.statSync(`${this.messagesDirectory}/${id}`).mtime
+        let dateCreated: Date = (await stat(`${this.messagesDirectory}/${id}`)).mtime
 
-        return new Message(id, author, splitMessage, dateCreated)
+        let message = new Message(id, author, splitMessage, dateCreated, authorGravatar);
+        return message;
     }
 
-    getLatestMessage(): Message{
-        let allMessages: Message[] = this.getAllMessages()
+    async getLatestMessage(): Promise<Message>{
+        let allMessages: Message[] = await this.getAllMessages()
 
         return allMessages[0]
     }

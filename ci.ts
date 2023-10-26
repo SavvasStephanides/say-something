@@ -1,12 +1,12 @@
 import * as fs from "fs"
-import { Message } from "~/modules/messages/message"
+import type { Message } from "~/modules/messages/message"
 import { MessageService } from "~/modules/messages/message-service"
 
 let messageIds: string[] = fs.readdirSync("app/messages")
 
 let messageService: MessageService = new MessageService()
 
-messageIds.forEach((messageId) => {
+messageIds.forEach(async (messageId) => {
     console.log(`Checks for message: ${messageId}`)
 
     if(messageId.includes(" ")){
@@ -46,7 +46,7 @@ messageIds.forEach((messageId) => {
 
     console.log("✅ Third line is not blank")
 
-    let message: Message = messageService.getMessageById(messageId)
+    let message: Message = await messageService.getMessageById(messageId)
 
     if(message.author.trim().length === 0){
         throw "❌ Author field is blank"
